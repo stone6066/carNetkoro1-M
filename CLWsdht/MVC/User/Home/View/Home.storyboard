@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="LMe-9h-NDW">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v6g-fv-9Ts" customClass="HomeVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HDw-Tk-twK"/>
+                        <viewControllerLayoutGuide type="bottom" id="9aG-Pm-Pq4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GBq-i4-6E8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="homebg" translatesAutoresizingMaskIntoConstraints="NO" id="rAc-X9-OL2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="件商品供你选择" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zG5-lG-sqA">
+                                <rect key="frame" x="202" y="200" width="98" height="26"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="5xX-z2-QEh"/>
+                                    <constraint firstAttribute="width" constant="98" id="eof-OI-qoK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zv-WP-LKC">
+                                <rect key="frame" x="6" y="242" width="153" height="58"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.3362379016" blue="0.13053661420000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                                <state key="normal" title="我要修车">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="myCaseBtn:" destination="v6g-fv-9Ts" eventType="touchUpInside" id="Rla-kN-u0M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T92-XG-rTR">
+                                <rect key="frame" x="167" y="242" width="146" height="58"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.3362379016" blue="0.13053661420000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="我要买件">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="neederBtn:" destination="v6g-fv-9Ts" eventType="touchUpInside" id="rDC-vT-X0x"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="001999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-jn-xix">
+                                <rect key="frame" x="6" y="156" width="190" height="70"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reu-fM-9up">
+                                <rect key="frame" x="6" y="314" width="307" height="58"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.3362379016" blue="0.13053661420000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="我的订单">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="myOrder:" destination="v6g-fv-9Ts" eventType="touchUpInside" id="UJg-2y-e07"/>
+                                    <action selector="neederBtn:" destination="v6g-fv-9Ts" eventType="touchUpInside" id="u02-8w-cIS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yno-ci-qKc">
+                                <rect key="frame" x="6" y="388" width="307" height="58"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.3362379016" blue="0.13053661420000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="我的需求">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="myNeed:" destination="v6g-fv-9Ts" eventType="touchUpInside" id="aQL-QG-AZh"/>
+                                    <action selector="neederBtn:" destination="v6g-fv-9Ts" eventType="touchUpInside" id="Spe-Cf-9IG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yno-ci-qKc" firstAttribute="leading" secondItem="GBq-i4-6E8" secondAttribute="leadingMargin" constant="-14" id="2Ov-zF-2pA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yno-ci-qKc" secondAttribute="trailing" constant="-13" id="3lS-BD-Epe"/>
+                            <constraint firstItem="KlM-jn-xix" firstAttribute="leading" secondItem="GBq-i4-6E8" secondAttribute="leadingMargin" constant="-14" id="E4k-5f-Otv"/>
+                            <constraint firstItem="T92-XG-rTR" firstAttribute="width" secondItem="0zv-WP-LKC" secondAttribute="width" id="Epv-yP-8Ji"/>
+                            <constraint firstItem="0zv-WP-LKC" firstAttribute="leading" secondItem="GBq-i4-6E8" secondAttribute="leadingMargin" constant="-14" id="LU8-Xv-VQq"/>
+                            <constraint firstItem="KlM-jn-xix" firstAttribute="top" secondItem="HDw-Tk-twK" secondAttribute="bottom" constant="92" id="LxM-IJ-BqS"/>
+                            <constraint firstItem="T92-XG-rTR" firstAttribute="leading" secondItem="0zv-WP-LKC" secondAttribute="trailing" constant="8" id="VHB-aa-xqu"/>
+                            <constraint firstItem="T92-XG-rTR" firstAttribute="top" secondItem="KlM-jn-xix" secondAttribute="bottom" constant="16" id="Vg5-WC-IRF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T92-XG-rTR" secondAttribute="trailing" constant="-13" id="ZeV-K4-oad"/>
+                            <constraint firstItem="yno-ci-qKc" firstAttribute="top" secondItem="reu-fM-9up" secondAttribute="bottom" constant="13" id="ZoT-Ya-JXE"/>
+                            <constraint firstItem="reu-fM-9up" firstAttribute="height" secondItem="0zv-WP-LKC" secondAttribute="height" id="cUW-RI-v62"/>
+                            <constraint firstItem="rAc-X9-OL2" firstAttribute="top" secondItem="HDw-Tk-twK" secondAttribute="bottom" id="cu5-vB-6ec"/>
+                            <constraint firstItem="rAc-X9-OL2" firstAttribute="leading" secondItem="GBq-i4-6E8" secondAttribute="leadingMargin" constant="-20" id="fFg-he-4Tp"/>
+                            <constraint firstItem="9aG-Pm-Pq4" firstAttribute="top" secondItem="yno-ci-qKc" secondAttribute="bottom" constant="122" id="ftA-kd-ehP"/>
+                            <constraint firstItem="T92-XG-rTR" firstAttribute="top" secondItem="zG5-lG-sqA" secondAttribute="bottom" constant="16" id="i9l-zs-5ec"/>
+                            <constraint firstItem="reu-fM-9up" firstAttribute="leading" secondItem="GBq-i4-6E8" secondAttribute="leadingMargin" constant="-14" id="iun-2f-Quh"/>
+                            <constraint firstItem="reu-fM-9up" firstAttribute="top" secondItem="0zv-WP-LKC" secondAttribute="bottom" constant="14" id="jfy-qC-rHy"/>
+                            <constraint firstItem="zG5-lG-sqA" firstAttribute="leading" secondItem="KlM-jn-xix" secondAttribute="trailing" constant="6" id="k1K-QT-scS"/>
+                            <constraint firstItem="reu-fM-9up" firstAttribute="height" secondItem="T92-XG-rTR" secondAttribute="height" id="pMC-2W-YWF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="reu-fM-9up" secondAttribute="trailing" constant="-13" id="pm8-rv-bfN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rAc-X9-OL2" secondAttribute="trailing" constant="-20" id="qVo-Zo-EgZ"/>
+                            <constraint firstItem="yno-ci-qKc" firstAttribute="height" secondItem="reu-fM-9up" secondAttribute="height" id="rT8-JJ-Cuh"/>
+                            <constraint firstItem="0zv-WP-LKC" firstAttribute="width" secondItem="KlM-jn-xix" secondAttribute="height" multiplier="153:70" id="s5m-y1-Jgv"/>
+                            <constraint firstItem="zG5-lG-sqA" firstAttribute="leading" secondItem="KlM-jn-xix" secondAttribute="trailing" constant="6" id="udo-UH-RLy"/>
+                            <constraint firstItem="reu-fM-9up" firstAttribute="top" secondItem="T92-XG-rTR" secondAttribute="bottom" constant="14" id="xxp-Ps-dal"/>
+                            <constraint firstItem="9aG-Pm-Pq4" firstAttribute="top" secondItem="rAc-X9-OL2" secondAttribute="bottom" id="ycH-jo-BDi"/>
+                            <constraint firstItem="zG5-lG-sqA" firstAttribute="trailing" secondItem="GBq-i4-6E8" secondAttribute="trailingMargin" id="zSJ-RF-dGE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Of-a4-uAK">
+                        <barButtonItem key="leftBarButtonItem" title="车联网" style="done" id="Gcw-WR-UbS">
+                            <color key="tintColor" red="1" green="0.3362379016" blue="0.13053661420000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myCase" destination="0zv-WP-LKC" id="Ak6-4w-TiK"/>
+                        <outlet property="myNeed" destination="yno-ci-qKc" id="phx-XZ-YkW"/>
+                        <outlet property="myOrder" destination="reu-fM-9up" id="u7h-Tq-gi7"/>
+                        <outlet property="needer" destination="T92-XG-rTR" id="hDL-g1-t80"/>
+                        <outlet property="repairCarOnlineNumber" destination="KlM-jn-xix" id="ccR-ci-dLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BL3-ut-tq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mce-PY-LIo">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6gL-fo-2PJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gdv-dZ-J9k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v6g-fv-9Ts" kind="relationship" relationship="rootViewController" id="vdL-JW-Z1k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbM-Jv-hbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="382"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homebg" width="240" height="348"/>
+    </resources>
+</document>
