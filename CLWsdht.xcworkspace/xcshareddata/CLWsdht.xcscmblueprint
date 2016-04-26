@@ -1,17 +1,19 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "27C55273D19426698194C67C467B7C2DC7E57E00",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "50D00EE8CB584AB4DD3A5EE4653B7211C2868F54",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "27C55273D19426698194C67C467B7C2DC7E57E00" : 0,
     "1903E254AF56FAAF60C871F879B9B8280E5C8111" : 0,
+    "50D00EE8CB584AB4DD3A5EE4653B7211C2868F54" : 0,
     "0053EEAF2668E5D0D219298682FAE6071EBCB71F" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FE0343AA-F850-4677-89EE-76665365C072",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "27C55273D19426698194C67C467B7C2DC7E57E00" : "carNetkoro1\/",
     "1903E254AF56FAAF60C871F879B9B8280E5C8111" : "",
+    "50D00EE8CB584AB4DD3A5EE4653B7211C2868F54" : "carNetkoro1-master\/",
     "0053EEAF2668E5D0D219298682FAE6071EBCB71F" : "CLWsdht\/CLWsdht\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "CLWsdht",
@@ -32,6 +34,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/atomu1\/carNetkoro1.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "27C55273D19426698194C67C467B7C2DC7E57E00"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/atomu1\/carNetkoro1-M.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "50D00EE8CB584AB4DD3A5EE4653B7211C2868F54"
     }
   ]
 }
