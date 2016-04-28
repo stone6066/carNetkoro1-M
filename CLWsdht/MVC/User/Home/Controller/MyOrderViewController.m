@@ -187,8 +187,8 @@
 - (IBAction)returnBuy:(UIButton *)sender {
     [self setHidesBottomBarWhenPushed:YES];
     ReturnGoodsViewController *returnGoods = [[ReturnGoodsViewController alloc] init];
-    _state = @"5";
-    returnGoods.orderState = _state;
+//    _state = @"5";
+//    returnGoods.orderState = _state;
     [self.navigationController pushViewController:returnGoods animated:YES];
 }
 

@@ -20,6 +20,11 @@
 @property (nonatomic, strong) UITableView *orderTableView;
 @property (nonatomic, strong) NSMutableArray *partlistArr;
 @property (nonatomic, copy) NSString *userId;
+@property (weak, nonatomic) IBOutlet UILabel *label1;
+@property (weak, nonatomic) IBOutlet UILabel *label2;
+@property (weak, nonatomic) IBOutlet UILabel *label3;
+@property (weak, nonatomic) IBOutlet UILabel *label4;
+@property (weak, nonatomic) IBOutlet UILabel *label5;
 
 @end
 
@@ -31,9 +36,9 @@
     _partlistArr = [[NSMutableArray alloc] initWithCapacity:0];
     SingleCase *singleCase = [SingleCase sharedSingleCase];
     _userId = singleCase.str;
-
-    [self GetOrderListByNetwork];
     [self setUpView];
+    [self changLabel];
+    [self GetOrderListByNetwork];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,29 +54,69 @@
     [self.view addSubview:_orderTableView];
 }
 
+
+- (void)changLabel{
+    if ([_orderState  isEqual: @"0"]) {
+        [_label1 setBackgroundColor:[UIColor redColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"2"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor redColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"3"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor redColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"100"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor redColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"-1"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor redColor]];
+    }
+}
+
 //待确认
 - (IBAction)confirmBtn:(UIButton *)sender {
     _orderState = @"0";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //待付款
 - (IBAction)payBtn:(UIButton *)sender {
     _orderState = @"2";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //待评价
 - (IBAction)dispatchBtn:(UIButton *)sender {
     _orderState = @"3";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //已交易
 - (IBAction)receiveBtn:(UIButton *)sender {
     _orderState = @"100";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //已取消
 - (IBAction)judgeBtn:(UIButton *)sender {
     _orderState = @"-1";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 
@@ -108,7 +153,11 @@
                                               MaintainModel *maintainModel = [[MaintainModel alloc] init];
                                               _partlistArr = [maintainModel maintainModelWithDict:jsonDic];
                                               [_orderTableView reloadData];
-                                              [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              if (_partlistArr.count == 0) {
+                                                  [SVProgressHUD showErrorWithStatus:@"你还没有订单"];
+                                              }else{
+                                                  [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              }
                                               
                                           } else {
                                               //失败

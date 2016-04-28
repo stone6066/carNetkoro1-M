@@ -38,7 +38,7 @@
 
 //UI界面
 -(void)setUpView{
-    _orderTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStyleGrouped];
+    _orderTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
     _orderTableView.delegate=self;
     _orderTableView.dataSource=self;
     [_orderTableView registerNib:[UINib nibWithNibName:@"OrderTableViewCell" bundle:nil] forCellReuseIdentifier:@"orderCellIdentifer"];
@@ -49,9 +49,8 @@
 - (void)GetOrderListByNetwork{
     [SVProgressHUD showWithStatus:k_Status_Load];
     
-    NSString *urlStr = [NSString stringWithFormat:@"%@%@",BASEURL,@"Usr.asmx/GetOrdersList"];
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@",BASEURL,@"Usr.asmx/GetAllRefundPartsOrdersList"];
     NSDictionary *paramDict = @{
-                                @"state":_orderState,
                                 @"usrId":_userId,
                                 @"garageId":@"",
                                 @"storeId":@"",
@@ -79,7 +78,11 @@
                                               _partlistArr = [orderModel assignModelWithDict:jsonDic];
                                               NSLog(@"zzzzzzzzzzz%@",_partlistArr);
                                               [_orderTableView reloadData];
-                                              [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              if (_partlistArr.count == 0) {
+                                                  [SVProgressHUD showErrorWithStatus:@"你还没有订单"];
+                                              }else{
+                                                  [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              }
                                               
                                           } else {
                                               //失败

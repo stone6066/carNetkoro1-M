@@ -91,7 +91,11 @@
                                               _partlistArr = [orderModel assignModelWithDict:jsonDic];
                                               NSLog(@"zzzzzzzzzzz%@",_partlistArr);
                                               [_orderTableView reloadData];
-                                              [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              if (_partlistArr.count == 0) {
+                                                  [SVProgressHUD showErrorWithStatus:@"你还没有订单"];
+                                              }else{
+                                                  [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              }
                                               
                                           } else {
                                               //失败

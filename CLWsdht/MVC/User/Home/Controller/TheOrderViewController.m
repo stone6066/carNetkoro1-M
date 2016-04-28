@@ -10,11 +10,12 @@
 #import "AFNetworking.h"//主要用于网络请求方法
 #import "UIKit+AFNetworking.h"//里面有异步加载图片的方法
 #import "MJExtension.h"
-#import "OrderTableViewCell.h"
 #import "BaseHeader.h"
+#import "OrderTableViewCell.h"
 #import "OrderModel.h"
 #import "MyOrderViewController.h"
 #import "SingleCase.h"
+#import "ApplyReturnViewController.h"
 
 
 @interface TheOrderViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -22,6 +23,11 @@
 @property (nonatomic, strong) UITableView *orderTableView;
 @property (nonatomic, strong) NSMutableArray *partlistArr;
 @property (nonatomic, copy) NSString *userId;
+@property (weak, nonatomic) IBOutlet UILabel *label1;
+@property (weak, nonatomic) IBOutlet UILabel *label2;
+@property (weak, nonatomic) IBOutlet UILabel *label3;
+@property (weak, nonatomic) IBOutlet UILabel *label4;
+@property (weak, nonatomic) IBOutlet UILabel *label5;
 
 @end
 
@@ -33,8 +39,9 @@
     _partlistArr = [[NSMutableArray alloc] initWithCapacity:0];
     SingleCase *singleCase = [SingleCase sharedSingleCase];
     _userId = singleCase.str;
-    [self GetOrderListByNetwork];
     [self setUpView];
+    [self changLabel];
+    [self GetOrderListByNetwork];
 }
 
 //UI界面
@@ -46,29 +53,68 @@
     [self.view addSubview:_orderTableView];
 }
 
+- (void)changLabel{
+    if ([_orderState  isEqual: @"0"]) {
+        [_label1 setBackgroundColor:[UIColor redColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"1"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor redColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"2"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor redColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"3"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor redColor]];
+        [_label5 setBackgroundColor:[UIColor whiteColor]];
+    }else if ([_orderState  isEqual: @"4"]){
+        [_label1 setBackgroundColor:[UIColor whiteColor]];
+        [_label2 setBackgroundColor:[UIColor whiteColor]];
+        [_label3 setBackgroundColor:[UIColor whiteColor]];
+        [_label4 setBackgroundColor:[UIColor whiteColor]];
+        [_label5 setBackgroundColor:[UIColor redColor]];
+    }
+}
+
 //待确认
 - (IBAction)confirmBtn:(UIButton *)sender {
     _orderState = @"0";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //待付款
 - (IBAction)payBtn:(UIButton *)sender {
     _orderState = @"1";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //待发货
 - (IBAction)dispatchBtn:(UIButton *)sender {
     _orderState = @"2";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //待收货
 - (IBAction)receiveBtn:(UIButton *)sender {
     _orderState = @"3";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 //待评价
 - (IBAction)judgeBtn:(UIButton *)sender {
     _orderState = @"4";
+    [self changLabel];
     [self GetOrderListByNetwork];
 }
 
@@ -105,7 +151,11 @@
                                               OrderModel *orderModel = [[OrderModel alloc] init];
                                               _partlistArr = [orderModel assignModelWithDict:jsonDic];
                                               [_orderTableView reloadData];
-                                              [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              if (_partlistArr.count == 0) {
+                                                  [SVProgressHUD showErrorWithStatus:@"你还没有订单"];
+                                              }else{
+                                                  [SVProgressHUD showSuccessWithStatus:  k_Success_Load];
+                                              }
                                               
                                           } else {
                                               //失败
@@ -175,7 +225,23 @@
     [cancelButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
     [cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [cancelButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    //[button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
+    //确认收货按钮
+    UIButton *crnfirmButton = [[UIButton alloc] initWithFrame:CGRectMake(footerView.frame.size.width-95, footerView.frame.size.height-35, 80, 30)];
+    [crnfirmButton setBackgroundColor:[UIColor redColor]];
+    [crnfirmButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [crnfirmButton setTitle:@"确认收货" forState:UIControlStateNormal];
+    [crnfirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [crnfirmButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    //[button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
+    //评价按钮
+    UIButton *judgeButton = [[UIButton alloc] initWithFrame:CGRectMake(footerView.frame.size.width-80, footerView.frame.size.height-35, 65, 30)];
+    [judgeButton setBackgroundColor:[UIColor redColor]];
+    [judgeButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [judgeButton setTitle:@"评价" forState:UIControlStateNormal];
+    [judgeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [judgeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     //[button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
     //支付按钮
     UIButton *payButton = [[UIButton alloc] initWithFrame:CGRectMake(cancelButton.frame.origin.x-70, cancelButton.frame.origin.y, 65, 30)];
@@ -183,8 +249,17 @@
     [payButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [payButton setTitle:@"支付" forState:UIControlStateNormal];
     [payButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [payButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [payButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     //[button addTarget:self action:@selector(button:) forControlEvents:UIControlEventTouchUpInside];
+    //退货按钮
+    UIButton *returnButton = [[UIButton alloc] initWithFrame:CGRectMake(cancelButton.frame.origin.x-70, cancelButton.frame.origin.y, 65, 30)];
+    [returnButton setBackgroundColor:[UIColor redColor]];
+    [returnButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [returnButton setTitle:@"退货" forState:UIControlStateNormal];
+    [returnButton setTag:section];
+    [returnButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [returnButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    [returnButton addTarget:self action:@selector(returnButton:) forControlEvents:UIControlEventTouchUpInside];
     
     //等待商家确认状态
     UILabel *storeOK = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 90, 15)];
@@ -215,8 +290,11 @@
     else if ([state isEqualToString:@"2"]){
     }
     else if ([state isEqualToString:@"3"]){
+        [footerView addSubview:crnfirmButton];
     }
     else if ([state isEqualToString:@"4"]){
+        [footerView addSubview:judgeButton];
+        [footerView addSubview:returnButton];
     }
     //根据修理厂的状态调整UI
     if ([garageState isEqualToString:@"0"]) {
@@ -285,7 +363,6 @@
 
 //返回section的个数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    NSLog(@"zzzzzz%lu",(unsigned long)_partlistArr.count);
     return _partlistArr.count;
 }
 
@@ -298,6 +375,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //选中cell要做的操作
     
+}
+
+
+#pragma mark -- 退货按钮响应事件
+- (void)returnButton:(UIButton *)btn{
+    ApplyReturnViewController *applyVC = [[ApplyReturnViewController alloc] init];
+    applyVC.returnNumber = _partlistArr[btn.tag];
+    [self.navigationController pushViewController:applyVC animated:YES];
+}
+- (void)zhangmengBtn:(OrderModel *)model{
+    NSLog(@"model = %@", model);
 }
 
 

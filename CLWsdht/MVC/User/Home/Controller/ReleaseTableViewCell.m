@@ -9,6 +9,7 @@
 #import "ReleaseTableViewCell.h"
 #import "SDImageCache.h"
 #import "UIImageView+WebCache.h"
+#import "ReleaseMainOrderViewController.h"
 
 
 @implementation ReleaseTableViewCell
@@ -21,7 +22,7 @@
     [_CityName setText:model.CityName];
     [_FuturePrice setText:[NSString stringWithFormat:@"¥%@",model.FuturePrice]];
     [_Address setText:model.Address];
-
+    _rModel = model;
 }
 
 - (void)awakeFromNib {
@@ -30,10 +31,14 @@
 
 //确认选择按钮的响应事件
 - (IBAction)okButtonClicked:(UIButton *)sender {
+    ReleaseMainOrderViewController *releaseMainVC = [[ReleaseMainOrderViewController alloc] init];
+    [releaseMainVC confirmBtn:_rModel];
 }
 
 //进店看看按钮的响应事件
 - (IBAction)comeStoreBtn:(UIButton *)sender {
+    ReleaseMainOrderViewController *releaseMVC = [[ReleaseMainOrderViewController alloc] init];
+    [releaseMVC comeStoreBtn:_rModel];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

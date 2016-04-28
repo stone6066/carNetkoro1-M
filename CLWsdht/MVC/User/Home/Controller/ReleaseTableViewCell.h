@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *CityName;
 @property (weak, nonatomic) IBOutlet UILabel *Address;
 
+@property (nonatomic, strong) ReleaseModel *rModel;
+
 - (void)setReleaseOrderWithModel:(ReleaseModel *)model;
 
 @end

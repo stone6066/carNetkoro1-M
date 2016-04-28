@@ -8,10 +8,14 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 #import <UIKit/UIKit.h>
+#import "ReleaseModel.h"
 
 @interface ReleaseMainOrderViewController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *jpushDict;
 @property (nonatomic, copy) NSString *uuid;
+
+- (void)confirmBtn:(ReleaseModel *)rModel;
+- (void)comeStoreBtn:(ReleaseModel *)cModel;
 
 @end

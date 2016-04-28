@@ -45,7 +45,7 @@
     backIetm.title =@"返回";
     backIetm.tintColor = [UIColor orangeColor];
 
-    //[SVProgressHUD showWithStatus:k_Status_Load];
+    [SVProgressHUD showWithStatus:k_Status_Load];
     NSString *uuid = [MJYUtils mjy_uuid];
     ReleaseMainOrderViewController *releaseVC = [[ReleaseMainOrderViewController alloc] init];
     releaseVC.uuid = uuid;
@@ -58,23 +58,20 @@
                                       @"Id":uuid
                                       };
     NSError *error;
-    NSData *competitionOrdersJsonData = [NSJSONSerialization dataWithJSONObject:competitionOrderJson options:NSJSONWritingPrettyPrinted error:&error];//此处data参数是我上面提到的key为"data"的数组
+    NSData *competitionOrdersJsonData = [NSJSONSerialization dataWithJSONObject:competitionOrderJson options:NSJSONWritingPrettyPrinted error:&error];
     NSString *competitionOrdersJsonDataJsonString = [[NSString alloc] initWithData:competitionOrdersJsonData encoding:NSUTF8StringEncoding];
-    NSLog(@"competitionOrdersJsonDataJsonString = %@",competitionOrdersJsonDataJsonString);
     
     NSArray *partsIdsJson = @[
                           @"eebd768a-8755-4b20-97c5-0267a45f6de6"
                           ];
-    NSLog(@"partsIdsJson = %@",partsIdsJson);
     NSData *partsIdsJsonData = [NSJSONSerialization dataWithJSONObject:partsIdsJson options:NSJSONWritingPrettyPrinted error:&error];
     NSString *partsIdsJsonDataJsonString = [[NSString alloc] initWithData:partsIdsJsonData encoding:NSUTF8StringEncoding];
-    NSLog(@"partsIdsJsonDataJsonString = %@",partsIdsJsonDataJsonString);
-    
     
     NSDictionary *paramDict = @{
                                 @"CompetitionOrderJson":competitionOrdersJsonDataJsonString,
                                 @"PartsIds":partsIdsJsonDataJsonString
                                 };
+    NSLog(@"dic = %@", paramDict);
     
     
     [ApplicationDelegate.httpManager POST:urlStr

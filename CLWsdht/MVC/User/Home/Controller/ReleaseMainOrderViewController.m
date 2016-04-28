@@ -207,6 +207,15 @@
     
 }
 
+#pragma mark -- cell上按钮的响应
+//确认选择按钮的响应事件
+- (void)confirmBtn:(ReleaseModel *)rModel{
+}
+//进店看看按钮的响应事件
+- (void)comeStoreBtn:(ReleaseModel *)cModel{
+    
+}
+
 
 
 - (void)didReceiveMemoryWarning {
