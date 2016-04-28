@@ -22,7 +22,7 @@
                             <constraint firstAttribute="width" constant="100" id="lca-95-0x8"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2i-37-GBl">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2i-37-GBl">
                         <rect key="frame" x="0.0" y="116" width="160" height="30"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -32,8 +32,11 @@
                         <state key="normal" title="确认选择">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="okButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Iu-tD-nRy"/>
+                        </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oax-Eb-4M5">
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oax-Eb-4M5">
                         <rect key="frame" x="161" y="116" width="159" height="30"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -43,6 +46,9 @@
                         <state key="normal" title="进店看看">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="comeStoreBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DxP-yg-F5P"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马骥修理厂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7V-N2-kX2">
                         <rect key="frame" x="116" y="8" width="196" height="21"/>
@@ -71,39 +77,70 @@
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="黑龙江省 哈尔滨市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhY-7x-WmU">
-                        <rect key="frame" x="116" y="87" width="196" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="黑龙江省" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trk-BL-cVW">
+                        <rect key="frame" x="116" y="87" width="52" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="ZlQ-LV-a8x"/>
+                            <constraint firstAttribute="height" constant="21" id="MZ7-pq-Uuf"/>
+                            <constraint firstAttribute="width" constant="52" id="on6-57-Mjh"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="哈尔滨市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjC-Dp-knC">
+                        <rect key="frame" x="170" y="87" width="52" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="WuP-Sv-VHk"/>
+                            <constraint firstAttribute="height" constant="21" id="hLv-lf-3vZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="黑龙江省" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI9-3q-8Ye">
+                        <rect key="frame" x="222" y="87" width="90" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="L6m-sG-15i"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="N2i-37-GBl" firstAttribute="top" secondItem="PhY-7x-WmU" secondAttribute="bottom" constant="8" id="2BT-N2-NNv"/>
+                    <constraint firstItem="qI9-3q-8Ye" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="3Ek-Vn-MdY"/>
                     <constraint firstItem="oax-Eb-4M5" firstAttribute="width" secondItem="N2i-37-GBl" secondAttribute="width" id="5dE-FW-ggf"/>
-                    <constraint firstItem="PhY-7x-WmU" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="5hi-93-DXd"/>
                     <constraint firstAttribute="trailingMargin" secondItem="oax-Eb-4M5" secondAttribute="trailing" constant="-8" id="6Mu-0j-msO"/>
                     <constraint firstItem="jXH-TE-rgI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="108" id="6bo-3u-srP"/>
+                    <constraint firstItem="oax-Eb-4M5" firstAttribute="top" secondItem="trk-BL-cVW" secondAttribute="bottom" constant="8" id="8hd-I4-QYb"/>
                     <constraint firstItem="VAv-ad-deg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="C6u-eP-8OK"/>
                     <constraint firstItem="eJc-Ax-4ym" firstAttribute="top" secondItem="C7V-N2-kX2" secondAttribute="bottom" constant="3" id="DTw-lb-VeZ"/>
                     <constraint firstItem="C7V-N2-kX2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="108" id="DgN-kf-KM7"/>
-                    <constraint firstItem="oax-Eb-4M5" firstAttribute="top" secondItem="PhY-7x-WmU" secondAttribute="bottom" constant="8" id="IPd-kW-F7A"/>
+                    <constraint firstItem="oax-Eb-4M5" firstAttribute="top" secondItem="hjC-Dp-knC" secondAttribute="bottom" constant="8" id="IvV-gb-m7O"/>
                     <constraint firstItem="C7V-N2-kX2" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Jp9-SC-bjP"/>
                     <constraint firstItem="C7V-N2-kX2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="MyJ-NZ-zWp"/>
-                    <constraint firstItem="PhY-7x-WmU" firstAttribute="top" secondItem="jXH-TE-rgI" secondAttribute="bottom" constant="5" id="NPC-9A-QqN"/>
+                    <constraint firstItem="qI9-3q-8Ye" firstAttribute="leading" secondItem="hjC-Dp-knC" secondAttribute="trailing" id="NC5-65-dsi"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jXH-TE-rgI" secondAttribute="trailing" constant="87" id="Q9t-ah-FNj"/>
                     <constraint firstItem="eJc-Ax-4ym" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="108" id="UqI-IL-Zth"/>
+                    <constraint firstItem="hjC-Dp-knC" firstAttribute="leading" secondItem="trk-BL-cVW" secondAttribute="trailing" constant="2" id="Ve3-k5-310"/>
                     <constraint firstItem="VAv-ad-deg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bK5-Pm-rVh"/>
                     <constraint firstItem="oax-Eb-4M5" firstAttribute="leading" secondItem="N2i-37-GBl" secondAttribute="trailing" constant="1" id="g2B-5M-A8A"/>
+                    <constraint firstItem="trk-BL-cVW" firstAttribute="leading" secondItem="VAv-ad-deg" secondAttribute="trailing" constant="8" id="ntb-4m-1gz"/>
+                    <constraint firstItem="oax-Eb-4M5" firstAttribute="top" secondItem="qI9-3q-8Ye" secondAttribute="bottom" constant="8" id="s8M-P2-k2E"/>
                     <constraint firstItem="jXH-TE-rgI" firstAttribute="top" secondItem="eJc-Ax-4ym" secondAttribute="bottom" constant="8" id="tzB-Jf-gPb"/>
-                    <constraint firstItem="PhY-7x-WmU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="108" id="x9n-mU-EPt"/>
                     <constraint firstItem="eJc-Ax-4ym" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="xWM-nB-sDB"/>
                     <constraint firstItem="N2i-37-GBl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="xWt-2K-0F1"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="Address" destination="qI9-3q-8Ye" id="rdK-q2-x6k"/>
+                <outlet property="CityName" destination="hjC-Dp-knC" id="auB-bG-JkY"/>
+                <outlet property="FuturePrice" destination="jXH-TE-rgI" id="KDK-us-5C0"/>
+                <outlet property="PartsUseFor" destination="eJc-Ax-4ym" id="acn-Pz-VXM"/>
+                <outlet property="Province" destination="trk-BL-cVW" id="3cg-7y-O6i"/>
+                <outlet property="Url" destination="VAv-ad-deg" id="Ne7-C2-3CF"/>
+                <outlet property="UsrGarageName" destination="C7V-N2-kX2" id="sZs-0a-ck3"/>
+            </connections>
             <point key="canvasLocation" x="416" y="234"/>
         </tableViewCell>
     </objects>

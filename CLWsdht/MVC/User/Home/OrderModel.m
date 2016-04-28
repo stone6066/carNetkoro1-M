@@ -11,7 +11,7 @@
 
 @implementation OrderModel
 
-- (NSArray *)assignModelWithDict: (NSDictionary *) dataDict{
+- (NSMutableArray *)assignModelWithDict: (NSDictionary *) dataDict{
     NSDictionary *dic1 = [[NSDictionary alloc] init];
     dic1 = [dataDict objectForKey:@"Data"];
     NSArray *arr1 = [[NSArray alloc] init];

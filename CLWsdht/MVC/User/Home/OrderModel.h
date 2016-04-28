@@ -22,7 +22,7 @@
 @property (nonatomic, copy) NSString *GarageState;
 @property (nonatomic, strong) NSArray *PartsList;
 
-@property (nonatomic, strong) GoodModel *goodmodel;
-- (NSArray *)assignModelWithDict: (NSDictionary *) dataDict;
+//@property (nonatomic, strong) GoodModel *goodmodel;
+- (NSMutableArray *)assignModelWithDict: (NSDictionary *) dataDict;
 
 @end

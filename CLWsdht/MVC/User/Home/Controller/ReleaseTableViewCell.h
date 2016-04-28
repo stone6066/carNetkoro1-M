@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ReleaseModel.h"
 
 @interface ReleaseTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *Url;
+@property (weak, nonatomic) IBOutlet UILabel *UsrGarageName;
+@property (weak, nonatomic) IBOutlet UILabel *PartsUseFor;
+@property (weak, nonatomic) IBOutlet UILabel *FuturePrice;
+@property (weak, nonatomic) IBOutlet UILabel *Province;
+@property (weak, nonatomic) IBOutlet UILabel *CityName;
+@property (weak, nonatomic) IBOutlet UILabel *Address;
+
+- (void)setReleaseOrderWithModel:(ReleaseModel *)model;
 
 @end
