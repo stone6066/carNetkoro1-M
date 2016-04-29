@@ -10,6 +10,18 @@
 		2944D8651C848313005B6A95 /* PartsListData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2944D8641C848313005B6A95 /* PartsListData.m */; };
 		2944D8681C84839C005B6A95 /* PartsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2944D8671C84839C005B6A95 /* PartsData.m */; };
 		2944D86B1C8484CB005B6A95 /* PartsModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2944D86A1C8484CB005B6A95 /* PartsModal.m */; };
+		3ABBB6FB1CD2F1FD00AEA819 /* per_buyers.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ABBB6FA1CD2F1FD00AEA819 /* per_buyers.png */; };
+		3AECD6EA1CD2EE4F0076A225 /* DemandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6E71CD2EE4F0076A225 /* DemandModel.m */; };
+		3AECD6EB1CD2EE4F0076A225 /* UserRespondDemandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6E91CD2EE4F0076A225 /* UserRespondDemandModel.m */; };
+		3AECD6FE1CD2EE6C0076A225 /* UserAccountManagerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6ED1CD2EE6C0076A225 /* UserAccountManagerVC.m */; };
+		3AECD6FF1CD2EE6C0076A225 /* UserAddressEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6EF1CD2EE6C0076A225 /* UserAddressEditVC.m */; };
+		3AECD7001CD2EE6C0076A225 /* UserAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6F11CD2EE6C0076A225 /* UserAddressVC.m */; };
+		3AECD7011CD2EE6C0076A225 /* UserDemandInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6F31CD2EE6C0076A225 /* UserDemandInfoVC.m */; };
+		3AECD7021CD2EE6C0076A225 /* UserDemandVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6F51CD2EE6C0076A225 /* UserDemandVC.m */; };
+		3AECD7031CD2EE6C0076A225 /* UserEditPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6F71CD2EE6C0076A225 /* UserEditPasswordVC.m */; };
+		3AECD7041CD2EE6C0076A225 /* UserEditTelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6F91CD2EE6C0076A225 /* UserEditTelVC.m */; };
+		3AECD7051CD2EE6C0076A225 /* UserEditUserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6FB1CD2EE6C0076A225 /* UserEditUserInfoVC.m */; };
+		3AECD7061CD2EE6C0076A225 /* UserMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AECD6FD1CD2EE6C0076A225 /* UserMsgVC.m */; };
 		58F20A051CCB18CA008D513F /* MyNeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F20A021CCB18CA008D513F /* MyNeed.storyboard */; };
 		58F20A061CCB18CA008D513F /* MyNeedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F20A041CCB18CA008D513F /* MyNeedVC.m */; };
 		58F20A661CCB18EF008D513F /* AddRequireInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F20A0F1CCB18EE008D513F /* AddRequireInfoViewController.m */; };
@@ -195,6 +207,29 @@
 		2944D8691C8484CB005B6A95 /* PartsModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartsModal.h; sourceTree = "<group>"; };
 		2944D86A1C8484CB005B6A95 /* PartsModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartsModal.m; sourceTree = "<group>"; };
 		39BB54A6DD09D6E8547EFEDB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3ABBB6FA1CD2F1FD00AEA819 /* per_buyers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = per_buyers.png; path = image/per_buyers.png; sourceTree = "<group>"; };
+		3AECD6E61CD2EE4F0076A225 /* DemandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemandModel.h; path = Model/DemandModel.h; sourceTree = "<group>"; };
+		3AECD6E71CD2EE4F0076A225 /* DemandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemandModel.m; path = Model/DemandModel.m; sourceTree = "<group>"; };
+		3AECD6E81CD2EE4F0076A225 /* UserRespondDemandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserRespondDemandModel.h; path = Model/UserRespondDemandModel.h; sourceTree = "<group>"; };
+		3AECD6E91CD2EE4F0076A225 /* UserRespondDemandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserRespondDemandModel.m; path = Model/UserRespondDemandModel.m; sourceTree = "<group>"; };
+		3AECD6EC1CD2EE6C0076A225 /* UserAccountManagerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccountManagerVC.h; sourceTree = "<group>"; };
+		3AECD6ED1CD2EE6C0076A225 /* UserAccountManagerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountManagerVC.m; sourceTree = "<group>"; };
+		3AECD6EE1CD2EE6C0076A225 /* UserAddressEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressEditVC.h; sourceTree = "<group>"; };
+		3AECD6EF1CD2EE6C0076A225 /* UserAddressEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAddressEditVC.m; sourceTree = "<group>"; };
+		3AECD6F01CD2EE6C0076A225 /* UserAddressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressVC.h; sourceTree = "<group>"; };
+		3AECD6F11CD2EE6C0076A225 /* UserAddressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAddressVC.m; sourceTree = "<group>"; };
+		3AECD6F21CD2EE6C0076A225 /* UserDemandInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDemandInfoVC.h; sourceTree = "<group>"; };
+		3AECD6F31CD2EE6C0076A225 /* UserDemandInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDemandInfoVC.m; sourceTree = "<group>"; };
+		3AECD6F41CD2EE6C0076A225 /* UserDemandVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDemandVC.h; sourceTree = "<group>"; };
+		3AECD6F51CD2EE6C0076A225 /* UserDemandVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDemandVC.m; sourceTree = "<group>"; };
+		3AECD6F61CD2EE6C0076A225 /* UserEditPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditPasswordVC.h; sourceTree = "<group>"; };
+		3AECD6F71CD2EE6C0076A225 /* UserEditPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditPasswordVC.m; sourceTree = "<group>"; };
+		3AECD6F81CD2EE6C0076A225 /* UserEditTelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditTelVC.h; sourceTree = "<group>"; };
+		3AECD6F91CD2EE6C0076A225 /* UserEditTelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditTelVC.m; sourceTree = "<group>"; };
+		3AECD6FA1CD2EE6C0076A225 /* UserEditUserInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditUserInfoVC.h; sourceTree = "<group>"; };
+		3AECD6FB1CD2EE6C0076A225 /* UserEditUserInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditUserInfoVC.m; sourceTree = "<group>"; };
+		3AECD6FC1CD2EE6C0076A225 /* UserMsgVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMsgVC.h; sourceTree = "<group>"; };
+		3AECD6FD1CD2EE6C0076A225 /* UserMsgVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMsgVC.m; sourceTree = "<group>"; };
 		42BD9AE0019662919FB673B7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		58F20A021CCB18CA008D513F /* MyNeed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyNeed.storyboard; sourceTree = "<group>"; };
 		58F20A031CCB18CA008D513F /* MyNeedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNeedVC.h; sourceTree = "<group>"; };
@@ -540,6 +575,25 @@
 			);
 			name = "oyj-modal";
 			path = ../Login/Model;
+			sourceTree = "<group>";
+		};
+		3ABBB6F91CD2F12F00AEA819 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				3ABBB6FA1CD2F1FD00AEA819 /* per_buyers.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		3AECD6E51CD2EE340076A225 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AECD6E61CD2EE4F0076A225 /* DemandModel.h */,
+				3AECD6E71CD2EE4F0076A225 /* DemandModel.m */,
+				3AECD6E81CD2EE4F0076A225 /* UserRespondDemandModel.h */,
+				3AECD6E91CD2EE4F0076A225 /* UserRespondDemandModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		3E236D2E4348547FAC6A846D /* Pods */ = {
@@ -926,6 +980,7 @@
 		98E8C1681C49E50800310091 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3ABBB6F91CD2F12F00AEA819 /* image */,
 				98E8C1821C49E5EB00310091 /* address_list.json */,
 				DF0991CA1C585634001B6F2D /* Assets.xcassets */,
 				98E8C1791C49E50800310091 /* LaunchScreen.storyboard */,
@@ -1026,6 +1081,7 @@
 		98E8C1B21C49E5EB00310091 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				3AECD6E51CD2EE340076A225 /* Model */,
 				98E8C1B31C49E5EB00310091 /* Controller */,
 				98E8C1B61C49E5EB00310091 /* View */,
 			);
@@ -1035,6 +1091,24 @@
 		98E8C1B31C49E5EB00310091 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3AECD6EC1CD2EE6C0076A225 /* UserAccountManagerVC.h */,
+				3AECD6ED1CD2EE6C0076A225 /* UserAccountManagerVC.m */,
+				3AECD6EE1CD2EE6C0076A225 /* UserAddressEditVC.h */,
+				3AECD6EF1CD2EE6C0076A225 /* UserAddressEditVC.m */,
+				3AECD6F01CD2EE6C0076A225 /* UserAddressVC.h */,
+				3AECD6F11CD2EE6C0076A225 /* UserAddressVC.m */,
+				3AECD6F21CD2EE6C0076A225 /* UserDemandInfoVC.h */,
+				3AECD6F31CD2EE6C0076A225 /* UserDemandInfoVC.m */,
+				3AECD6F41CD2EE6C0076A225 /* UserDemandVC.h */,
+				3AECD6F51CD2EE6C0076A225 /* UserDemandVC.m */,
+				3AECD6F61CD2EE6C0076A225 /* UserEditPasswordVC.h */,
+				3AECD6F71CD2EE6C0076A225 /* UserEditPasswordVC.m */,
+				3AECD6F81CD2EE6C0076A225 /* UserEditTelVC.h */,
+				3AECD6F91CD2EE6C0076A225 /* UserEditTelVC.m */,
+				3AECD6FA1CD2EE6C0076A225 /* UserEditUserInfoVC.h */,
+				3AECD6FB1CD2EE6C0076A225 /* UserEditUserInfoVC.m */,
+				3AECD6FC1CD2EE6C0076A225 /* UserMsgVC.h */,
+				3AECD6FD1CD2EE6C0076A225 /* UserMsgVC.m */,
 				98E8C1B41C49E5EB00310091 /* UserVC.h */,
 				98E8C1B51C49E5EB00310091 /* UserVC.m */,
 			);
@@ -1572,6 +1646,7 @@
 				DF3C20071CD1E75B005FC26D /* ApplyReturnViewController.xib in Resources */,
 				58F20A671CCB18EF008D513F /* AddRequireInfoViewController.xib in Resources */,
 				98E8C1BA1C49E5EB00310091 /* LaunchScreen.storyboard in Resources */,
+				3ABBB6FB1CD2F1FD00AEA819 /* per_buyers.png in Resources */,
 				58F20A6F1CCB18EF008D513F /* Provincial.plist in Resources */,
 				58F20A8B1CCB18EF008D513F /* DetailsTableViewCell.xib in Resources */,
 				58F20A821CCB18EF008D513F /* TableViewSectionIndexCell.xib in Resources */,
@@ -1658,6 +1733,7 @@
 				98E8C1BD1C49E5EB00310091 /* CityListVC.m in Sources */,
 				C9342B311C4A2784000C8B97 /* MyShopCarBrandNameInfo.m in Sources */,
 				DF0991C81C5767C1001B6F2D /* ScrollViewTestViewController.m in Sources */,
+				3AECD7011CD2EE6C0076A225 /* UserDemandInfoVC.m in Sources */,
 				C9622DC51C4B40E700AE849E /* ZLNavigationController.m in Sources */,
 				98A3F4561CBDDF980059B739 /* GoodModel.m in Sources */,
 				DF0991CF1C59A777001B6F2D /* SubmitOrderViewController.m in Sources */,
@@ -1676,18 +1752,23 @@
 				C9622CBC1C4B28BF00AE849E /* MyShopCarAccessorySourceInfo.m in Sources */,
 				58F20A8E1CCB18EF008D513F /* SoyTableViewCell.m in Sources */,
 				98E8C1F71C49E60900310091 /* ViewBorderUtil.m in Sources */,
+				3AECD7041CD2EE6C0076A225 /* UserEditTelVC.m in Sources */,
+				3AECD7001CD2EE6C0076A225 /* UserAddressVC.m in Sources */,
 				C9622DB61C4B40E700AE849E /* ZLCamera.m in Sources */,
+				3AECD6FE1CD2EE6C0076A225 /* UserAccountManagerVC.m in Sources */,
 				58F20A7D1CCB18EF008D513F /* DetailsImageTableViewCell.m in Sources */,
 				58F20A061CCB18CA008D513F /* MyNeedVC.m in Sources */,
 				98C0258D1CBC87F80068ABE6 /* MaintainOrderViewController.m in Sources */,
 				58F20A731CCB18EF008D513F /* STPickerArea.m in Sources */,
 				58F20A681CCB18EF008D513F /* DetailsInfomationViewController.m in Sources */,
 				98E8C1C21C49E5EB00310091 /* AddressJSONModel.m in Sources */,
+				3AECD7021CD2EE6C0076A225 /* UserDemandVC.m in Sources */,
 				58F20A941CCB1AC8008D513F /* BaseModel.m in Sources */,
 				DFA54CDA1CD0B8F800817097 /* NSJSON+YBClass.m in Sources */,
 				C9A0D73E1C4A4B890028EEB8 /* MyShopCarAccessoryColorInfo.m in Sources */,
 				C9622DC91C4B40E700AE849E /* ZLPhotoPickerCollectionView.m in Sources */,
 				58F20A701CCB18EF008D513F /* ReleaseRequireModel.m in Sources */,
+				3AECD7051CD2EE6C0076A225 /* UserEditUserInfoVC.m in Sources */,
 				C9622DC01C4B40E700AE849E /* ZLPhotoPickerBrowserPhotoView.m in Sources */,
 				98A335911CC4842100126016 /* MaintainModel.m in Sources */,
 				58F20A711CCB18EF008D513F /* CellFactory.m in Sources */,
@@ -1701,6 +1782,7 @@
 				98E8C1EF1C49E60900310091 /* BaseViewController.m in Sources */,
 				C9622DD41C4B40EE00AE849E /* DACircularProgressView.m in Sources */,
 				58F20A7B1CCB18EF008D513F /* DetailsBasicInfoCell.m in Sources */,
+				3AECD6FF1CD2EE6C0076A225 /* UserAddressEditVC.m in Sources */,
 				C9A0D7381C4A430A0028EEB8 /* MyShopCarAccessoryNameInfo.m in Sources */,
 				C9622DC31C4B40E700AE849E /* ZLPhotoPickerDatas.m in Sources */,
 				9843A1581C9CECEF00FAE890 /* HmacSHA256.m in Sources */,
@@ -1722,6 +1804,7 @@
 				58F20A6A1CCB18EF008D513F /* ReleaseRequirementsViewController.m in Sources */,
 				58F20A951CCB1AC8008D513F /* BaseTableViewCell.m in Sources */,
 				98E8C1F51C49E60900310091 /* NS+Base64.m in Sources */,
+				3AECD7061CD2EE6C0076A225 /* UserMsgVC.m in Sources */,
 				58F20A7F1CCB18EF008D513F /* DetailsSureCell.m in Sources */,
 				58F20A861CCB18EF008D513F /* RequireListViewController.m in Sources */,
 				98A3358D1CC477E400126016 /* ReturnGoodsViewController.m in Sources */,
@@ -1738,13 +1821,16 @@
 				9825721A1CC869F100E63BE9 /* CeShiViewController.m in Sources */,
 				C9622DCC1C4B40E700AE849E /* ZLPhotoPickerGroupTableViewCell.m in Sources */,
 				C9622DBF1C4B40E700AE849E /* ZLPhotoPickerBrowserPhotoScrollView.m in Sources */,
+				3AECD6EA1CD2EE4F0076A225 /* DemandModel.m in Sources */,
 				C9622DC11C4B40E700AE849E /* ZLPhotoPickerCustomToolBarView.m in Sources */,
 				C9622DBA1C4B40E700AE849E /* ZLPhotoPickerBrowserPhoto.m in Sources */,
 				C9622DC41C4B40E700AE849E /* ZLPhotoPickerGroup.m in Sources */,
+				3AECD6EB1CD2EE4F0076A225 /* UserRespondDemandModel.m in Sources */,
 				C9622DB91C4B40E700AE849E /* ZLCameraViewController.m in Sources */,
 				DFA54CD71CD0900200817097 /* ReleaseModel.m in Sources */,
 				98E8C1EE1C49E60900310091 /* BaseTabBarController.m in Sources */,
 				C9622DC71C4B40E700AE849E /* ZLPhotoPickerGroupViewController.m in Sources */,
+				3AECD7031CD2EE6C0076A225 /* UserEditPasswordVC.m in Sources */,
 				2944D8681C84839C005B6A95 /* PartsData.m in Sources */,
 				DF0991941C561F11001B6F2D /* GoodsDetailsViewController.m in Sources */,
 				C9D829651C49F4130063EBC6 /* MyShopCellInfo.m in Sources */,

@@ -56,6 +56,19 @@
 
 
 
+/**
+ *  主端  个人信息
+ */
+
+#define k_url_GetDemandList             @"Usr.asmx/GetDemandList"   //获取需求列表
+#define k_url_GetDemandDetail           @"Usr.asmx/GetDemandDetail"//获取需求详情
+#define k_url_GetAddressList         @"address.asmx/UsrGetList"//获取地址列表
+#define k_url_AddAddress         @"address.asmx/AddUsrAddress"//添加地址
+#define k_url_auth_NewPwd           @"auth.asmx/NewPwd"             // 修改密码
+#define k_url_auth_NewMobile        @"auth.asmx/NewMobile"          // 修改手机号
+
+
+
 
 
 
