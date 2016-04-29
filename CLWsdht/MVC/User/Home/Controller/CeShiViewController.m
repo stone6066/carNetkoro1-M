@@ -26,7 +26,7 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 150, 50)];
     [button setBackgroundColor:[UIColor whiteColor]];
-    [button setTitle:@"擎天柱" forState:UIControlStateNormal];
+    [button setTitle:@"发布抢单" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [button.layer setMasksToBounds:YES];
     [button.layer setCornerRadius:4];
