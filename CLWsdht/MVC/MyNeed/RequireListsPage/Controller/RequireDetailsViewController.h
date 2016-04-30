@@ -7,9 +7,10 @@
 //
 
 #import "BaseViewController.h"
+@class RequireListModel;
 
 @interface RequireDetailsViewController : BaseViewController
 
-@property (nonatomic, strong) BaseModel *baseModel;
+@property (nonatomic, strong) RequireListModel *baseModel;
 
 @end

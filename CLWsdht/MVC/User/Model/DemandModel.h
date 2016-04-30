@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface DemandModel : NSObject
+
+
 @property (nonatomic ,copy) NSString *Id;
 @property (nonatomic ,copy) NSString *UsrId;
 @property (nonatomic ,copy) NSString *CarModelId;

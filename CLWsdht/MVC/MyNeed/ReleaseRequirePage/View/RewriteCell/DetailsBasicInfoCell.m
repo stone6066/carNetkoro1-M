@@ -56,7 +56,7 @@
 
 @property (nonatomic, strong) NSMutableDictionary *dataDic;
 
-@property (nonatomic, strong) BaseModel *tempModel;
+@property (nonatomic, strong) ReleaseRequireModel *tempModel;
 @property (nonatomic, copy) NSString *tempDescription;
 
 @property (nonatomic, strong) UIImage *tempImg;
@@ -72,12 +72,10 @@
 
 
 - (void)setModel:(BaseModel *)model {
-    [super model];
-    _titleLb.text = model.content;
-    _partsName.text = model.Name;
     
-    _tempModel = model;
-  
+    _tempModel = (ReleaseRequireModel *)model;
+    _titleLb.text = _tempModel.content;
+    _partsName.text = _tempModel.Name;
 }
 
 - (void)setYearBV {

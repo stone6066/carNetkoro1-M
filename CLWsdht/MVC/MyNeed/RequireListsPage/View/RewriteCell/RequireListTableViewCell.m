@@ -9,6 +9,7 @@
 #import "RequireListTableViewCell.h"
 #import "BaseHeader.h"
 #import "BaseModel.h"
+#import "RequireListModel.h"
 
 @interface RequireListTableViewCell ()
 @property (strong, nonatomic) IBOutlet UILabel *title;
@@ -18,6 +19,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *province;
 @property (strong, nonatomic) IBOutlet UILabel *count;
 @property (strong, nonatomic) IBOutlet UILabel *other;
+
+@property (nonatomic, strong) RequireListModel *requireModel;
 
 @end
 
@@ -68,13 +71,13 @@
 
 
 - (void)setModel:(BaseModel *)model {
-    [super model];
-    _count.text = [NSString stringWithFormat:@"数量%ld", model.Cnt];
-    _title.text = model.Title;
-    _type.text = model.CarBrandName;
+    _requireModel = (RequireListModel *)model;
+    _count.text = [NSString stringWithFormat:@"数量%ld", _requireModel.Cnt];
+    _title.text = _requireModel.Title;
+    _type.text = _requireModel.CarBrandName;
     _other.text = @"待选";
-    _detailsType.text = model.CarModelName;
-    _province.text = model.ProvincialName;
+    _detailsType.text = _requireModel.CarModelName;
+    _province.text = _requireModel.ProvincialName;
 //    NSLog(@"%@",model.Mobile);
 }
 

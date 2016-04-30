@@ -13,6 +13,8 @@
 #import "AddressJSONModel.h"//地址model
 #import "MyOrderViewController.h"//我的订单VC
 #import "CeShiViewController.h"
+#import "CarDemandViewController.h"
+
 
 @interface HomeVC (){
     
@@ -72,7 +74,9 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    if (self.tabBarController.tabBar.hidden) {
+        self.tabBarController.tabBar.hidden = NO;
+    }
     //加载首页数据信息
     
     userSeletedCity = ApplicationDelegate.currentCity;
@@ -236,6 +240,10 @@
 
 #pragma mark -我要买车
 - (IBAction)myCaseBtn:(UIButton *)sender {
+    CarDemandViewController *carDemand = [[CarDemandViewController alloc] init];
+    [self.navigationController pushViewController:carDemand animated:YES];
+
+    
 }
 
 #pragma mark -我要买件
