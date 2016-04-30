@@ -16,7 +16,7 @@
 - (void)setOrderWithModel:(GoodModel *)model{
     [_Url sd_setImageWithURL:[NSURL URLWithString:model.Url]];
     [_Name setText:model.Name];
-    [_Price setText:[NSString stringWithFormat:@"%@",model.Price]];
+    [_Price setText:[NSString stringWithFormat:@"¥%@",model.Price]];
     [_Cnt setText:[NSString stringWithFormat:@"X%@",model.Cnt]];
 }
 
