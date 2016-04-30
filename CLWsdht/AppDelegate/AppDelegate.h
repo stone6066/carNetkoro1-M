@@ -70,7 +70,10 @@
 @property (copy, nonatomic) NSDictionary *jPushDict;
 
 
-
+/*
+ *定位代理去重计数
+ */
+@property (assign, nonatomic) NSInteger endLocaltion;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext       *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel         *managedObjectModel;
@@ -79,6 +82,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
-
+-(void)std_readCityInfo;
+-(void)std_saveCityName:(NSString*)cityName;
 @end
 
