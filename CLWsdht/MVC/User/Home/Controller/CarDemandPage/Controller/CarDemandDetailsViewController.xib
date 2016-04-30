@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarDemandDetailsViewController">
+            <connections>
+                <outlet property="detailsInfoTableView" destination="3TA-TN-6Iz" id="H3M-35-0iF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-TN-6Iz">
+                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIl-bM-bRn">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKU-6K-6Wn">
+                            <rect key="frame" x="281" y="0.0" width="93.5" height="49"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="确认维修">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="sureJump:" destination="-1" eventType="touchUpInside" id="p0S-hY-dRs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bKU-6K-6Wn" secondAttribute="trailing" id="1ou-tD-fIA"/>
+                        <constraint firstItem="bKU-6K-6Wn" firstAttribute="width" secondItem="tIl-bM-bRn" secondAttribute="width" multiplier="0.25" id="3LM-5J-8GF"/>
+                        <constraint firstItem="bKU-6K-6Wn" firstAttribute="height" secondItem="tIl-bM-bRn" secondAttribute="height" id="bzr-6h-DQ8"/>
+                        <constraint firstAttribute="height" constant="49" id="jfm-xu-apN"/>
+                        <constraint firstItem="bKU-6K-6Wn" firstAttribute="centerY" secondItem="tIl-bM-bRn" secondAttribute="centerY" id="rzI-Lm-qg4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tIl-bM-bRn" secondAttribute="bottom" id="0Ah-5Q-EmP"/>
+                <constraint firstAttribute="trailing" secondItem="tIl-bM-bRn" secondAttribute="trailing" id="4gg-lf-aOe"/>
+                <constraint firstAttribute="trailing" secondItem="3TA-TN-6Iz" secondAttribute="trailing" id="CwT-js-iGo"/>
+                <constraint firstItem="3TA-TN-6Iz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WL1-W9-snA"/>
+                <constraint firstItem="tIl-bM-bRn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xc8-An-mfh"/>
+                <constraint firstItem="3TA-TN-6Iz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="q01-hx-mF1"/>
+                <constraint firstAttribute="bottom" secondItem="3TA-TN-6Iz" secondAttribute="bottom" constant="49" id="wJ6-51-6fo"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="-101.5" y="-191.5"/>
+        </view>
+    </objects>
+</document>
